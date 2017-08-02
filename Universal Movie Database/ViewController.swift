@@ -29,6 +29,7 @@ class ViewController: UIViewController, XMLParserDelegate {
         
     }
     
+    
     func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
         
         
@@ -37,9 +38,12 @@ class ViewController: UIViewController, XMLParserDelegate {
         case "movie":
             print(attributeDict["Title"] ?? "Title is missing")
             print(attributeDict["Rating"] ?? "Rating is missing")
+            print(attributeDict["Runtime"] ?? "Runtime is missing")
+            print("\n")
         default:
             break
         }
+        
     }
     
 
